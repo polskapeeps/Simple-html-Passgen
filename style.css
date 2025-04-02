@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
 
 :root {
-  --bg-color: #1a1a1d; /* Very dark grey, almost black */
-  --container-bg: #2c2f33; /* Dark grey */
-  --primary-color: #7289da; /* Discord blurple - vibrant */
-  --primary-hover: #5f73bc; /* Darker blurple */
-  --text-color: #e0e0e0; /* Light grey */
-  --text-muted: #a0a0a0; /* Medium grey */
+  --bg-color: #03080f; /* Very dark grey, almost black */
+  --container-bg: #0c1c23; /* Dark grey */
+  --primary-color: #193a4980; /* Discord blurple - vibrant */
+  --primary-hover: #193a49; /* Darker blurple */
+  --text-color: #32415a; /* Light grey */
+  --text-muted: #5e636d; /* Medium grey */
   --border-color: #40444b; /* Slightly lighter dark grey */
-  --input-bg: #1e1f22; /* Very dark input background */
+  --input-bg: #03080f; /* Very dark input background */
   --success-color: #43b581; /* Green */
   --error-color: #f04747; /* Red */
   --slider-track: #4f545c;
