@@ -5,8 +5,8 @@
   --container-bg: #0c1c23; /* Dark grey */
   --primary-color: #193a4980; /* Discord blurple - vibrant */
   --primary-hover: #193a49; /* Darker blurple */
-  --text-color: #32415a; /* Light grey */
-  --text-muted: #5e636d; /* Medium grey */
+  --text-color: #5e636d; /* Light grey */
+  --text-muted: #5e636d85; /* Medium grey */
   --border-color: #40444b; /* Slightly lighter dark grey */
   --input-bg: #03080f; /* Very dark input background */
   --success-color: #193a49; /* Green */
