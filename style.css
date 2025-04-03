@@ -9,8 +9,8 @@
   --text-muted: #5e636d; /* Medium grey */
   --border-color: #40444b; /* Slightly lighter dark grey */
   --input-bg: #03080f; /* Very dark input background */
-  --success-color: #43b581; /* Green */
-  --error-color: #f04747; /* Red */
+  --success-color: #193a49; /* Green */
+  --error-color: #5e636d; /* Red */
   --slider-track: #4f545c;
   --slider-thumb: var(--primary-color);
 }
@@ -61,7 +61,7 @@ h1 {
   font-size: 1.1rem;
   border: 1px solid var(--border-color);
   background-color: var(--input-bg);
-  color: var(--text-color);
+  color: var(--text-muted);
   border-radius: 6px 0 0 6px; /* Rounded left corners */
   outline: none;
   font-family: "Courier New", Courier, monospace; /* Monospaced font for password */
