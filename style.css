@@ -2,7 +2,7 @@
 
 :root {
   --bg-color: #03080f; /* Very dark grey, almost black */
-  --container-bg: #0c1c23; /* Dark grey */
+  --container-bg: #0c1c2362; /* Dark grey */
   --primary-color: #193a4980; /* Discord blurple - vibrant */
   --primary-hover: #193a49; /* Darker blurple */
   --text-color: #5e636d; /* Light grey */
@@ -12,7 +12,7 @@
   --success-color: #193a49; /* Green */
   --error-color: #5e636d; /* Red */
   --slider-track: #4f545c;
-  --slider-thumb: var(--primary-color);
+  --slider-thumb: var(--text-muted);
 }
 
 * {
@@ -74,9 +74,9 @@ h1 {
 #copyButton {
   padding: 12px 15px;
   background-color: var(--primary-color);
-  color: white;
+  color: var(--input-bg);
   border: none;
-  border-left: 1px solid var(--border-color);
+  border-left: 1px solid var(--bg-color);
   border-radius: 0 6px 6px 0; /* Rounded right corners */
   cursor: pointer;
   font-size: 1.1rem;
@@ -152,18 +152,18 @@ input[type="range"] {
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 20px;
+  width: 5px;
   height: 20px;
-  background: var(--slider-thumb);
+  background: var(--text-muted);
   border-radius: 50%;
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
 
 input[type="range"]::-moz-range-thumb {
-  width: 20px;
+  width: 5px;
   height: 20px;
-  background: var(--slider-thumb);
+  background: var(--text-muted);
   border-radius: 50%;
   cursor: pointer;
   border: none; /* Remove default border */
@@ -171,9 +171,12 @@ input[type="range"]::-moz-range-thumb {
 }
 
 input[type="range"]:hover::-webkit-slider-thumb {
-  background: var(--primary-hover);
+    width: 7px;
+    height: 20px;;
+  background: var(--success-color)
 }
 input[type="range"]:hover::-moz-range-thumb {
+    width: 7px;
   background: var(--primary-hover);
 }
 
@@ -194,7 +197,7 @@ input[type="checkbox"] {
 
 input[type="checkbox"]:checked {
   background-color: var(--primary-color);
-  border-color: var(--primary-color);
+  border-color: var(--border-color);
 }
 
 input[type="checkbox"]:checked::after {
@@ -207,7 +210,7 @@ input[type="checkbox"]:checked::after {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: block;
+  display: block
 }
 /* Fallback if FontAwesome isn't loaded */
 @font-face {
@@ -223,8 +226,8 @@ input[type="checkbox"]:checked::after {
 
 #generateButton {
   background-color: var(--primary-color);
-  color: white;
-  border: none;
+  color: var(--error-color);
+  border: 1px solid var(--border-color);
   padding: 15px 0; /* Full width padding */
   border-radius: 6px;
   font-size: 1.1rem;
