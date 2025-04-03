@@ -1,18 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
 
 :root {
-  --bg-color: #03080f; /* Very dark grey, almost black */
-  --container-bg: #0c1c2362; /* Dark grey */
-  --primary-color: #193a4980; /* Discord blurple - vibrant */
-  --primary-hover: #193a49; /* Darker blurple */
-  --text-color: #5e636d; /* Light grey */
-  --text-muted: #5e636d85; /* Medium grey */
-  --border-color: #40444b; /* Slightly lighter dark grey */
-  --input-bg: #03080f; /* Very dark input background */
-  --success-color: #5e636d; /* Green */
-  --error-color: #5e636d; /* Red */
+  --bg-color: #03080f; 
+  --container-bg: #0c1c2362; 
+  --primary-color: #193a4980; 
+  --primary-hover: #193a49; 
+  --text-color: #5e636d; 
+  --text-muted: #5e636d85; 
+  --border-color: #40444b; 
+  --input-bg: #03080f; 
+  --success-color: #5e636d; 
+  --error-color: #5e636d; 
   --slider-track: #4f545c;
-  --slider-thumb: var(--text-muted);
+  --slider-thumb: #193a4980; 
+  --slider-hover: 
 }
 
 * {
@@ -154,7 +155,7 @@ input[type="range"]::-webkit-slider-thumb {
   appearance: none;
   width: 5px;
   height: 20px;
-  background: var(--text-muted);
+  background: var(--slider-thumb);
   border-radius: 50%;
   cursor: pointer;
   transition: background-color 0.2s ease;
@@ -163,7 +164,7 @@ input[type="range"]::-webkit-slider-thumb {
 input[type="range"]::-moz-range-thumb {
   width: 5px;
   height: 20px;
-  background: var(--text-muted);
+  background: var(--slider-thumb);
   border-radius: 50%;
   cursor: pointer;
   border: none; /* Remove default border */
@@ -173,7 +174,7 @@ input[type="range"]::-moz-range-thumb {
 input[type="range"]:hover::-webkit-slider-thumb {
     width: 7px;
     height: 20px;
-  background: var(--success-color)
+  background: var(--primary-hover)
 }
 input[type="range"]:hover::-moz-range-thumb {
     width: 7px;
