@@ -17,15 +17,16 @@ const lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
 const numberChars = "0123456789";
 const symbolChars = "!@#$%^&*()_+[]{}|;:,.<>?";
 
-// --- Helper Functions ---
-function getRandomChar(characterString) {
-  const randomIndex = Math.floor(Math.random() * characterString.length);
+// --- Improved random char gen ---
+function getSecureRandomChar(characterString) {
+  const randomBuffer = new Uint32Array(1);
+  window.crypto.getRandomValues(randomBuffer);
+  const randomIndex = randomBuffer[0] % characterString.length;
   return characterString[randomIndex];
 }
 
 // --- Core Logic Functions ---
 function generatePassword() {
-  console.log("Generate button clicked"); //debugging
   const length = parseInt(lengthSlider.value);
 
   const uppercase = includeUppercase.checked;
@@ -34,12 +35,10 @@ function generatePassword() {
   const symbols = includeSymbols.checked;
 
   let allowedChars = "";
-  if (uppercase) allowedChars += uppercaseChars;
-  if (lowercase) allowedChars += lowercaseChars;
-  if (numbers) allowedChars += numberChars;
-  if (symbols) allowedChars += symbolChars;
-
-  let password = "";
+  if (includeUppercase.checked) allowedChars += uppercaseChars;
+  if (includeLowercase.checked) allowedChars += lowercaseChars;
+  if (includeNumbers.checked) allowedChars += numberChars;
+  if (includeSymbols.checked) allowedChars += symbolChars;
 
   if (!allowedChars) {
     errorMessage.textContent = "Please select at least one character type.";
@@ -48,8 +47,9 @@ function generatePassword() {
     errorMessage.textContent = ""; // Clear any previous error message
   }
 
+  let password = "";
   for (let i = 0; i < length; i++) {
-    password += getRandomChar(allowedChars);
+    password += getSecureRandomChar(allowedChars);
   }
 
   passwordDisplay.value = password;
