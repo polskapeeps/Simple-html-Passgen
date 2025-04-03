@@ -1,2 +1,5 @@
-# Simple-Passgen
- Just a simple html based password generator
+### Simple-html-PassGen
+---
+###### ***Work in progress***
+---
+
