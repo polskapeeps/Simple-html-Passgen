@@ -107,6 +107,31 @@ h1 {
   opacity: 1;
 }
 
+.strength-meter {
+  height: 8px;
+  width: 100%;
+  background-color: var(--text-muted);
+  border-radius: 4px;
+  margin-top: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.strength-meter-bar {
+  height: 100%;
+  width: 0;
+  background-color: var(--primary-hover);
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.strength-text {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-align: left;
+  margin-top: 5px;
+  height: 1em;
+}
+
 .options {
   margin-top: 25px;
   margin-bottom: 30px;
